@@ -17,9 +17,11 @@ export const Drinks = () => {
 
     // This is how you have been converting objects to <li> elements
     for (const drink of drinks) {
-        html += `<li>
-            <input type="radio" name="drink" value="${drink.id}" /> ${drink.name}
-        </li>`
+        html += `
+        <select id="resource">
+    <option value="0">Prompt to select resource...</option>
+    <option value="1">${drink.id} ${drink.name}{</option>
+    </select>`
     }
 
     html += "</ul>"
