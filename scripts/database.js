@@ -1,5 +1,5 @@
 const database = {
-    transientState: {}
+    transientState: {},
 
     locations: [
         { id: 1, name: "Gotham City"},
@@ -15,7 +15,7 @@ export const setLocation = (locationId) => {
 }
 
 export const getLocations = () => {
-    return database.getLocations.map(f => ({...f}))
+    return database.locations.map(f => ({...f}))
 }
 
 export const completeOrder = () => {
