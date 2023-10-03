@@ -80,11 +80,11 @@ export const setDrink = (drinkId) => {
 }
 
 export const getFoods =() => {
-    return database.getFoods.map(f => ({...f}))
+    return database.getFoods.map(foods => ({...foods}))
 }
 
  export const setFoods = (foodsId) => {
-     database.transientState.selectedLocation = locationId
+     database.transientState.selectedLocation = foodsId
      document.dispatchEvent(new CustomEvent("stateChanged"))
  }
 
