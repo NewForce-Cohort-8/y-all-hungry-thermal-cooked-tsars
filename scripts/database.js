@@ -1,7 +1,6 @@
 const database = {
     
     transientState: {},
-    
     desserts: [
         {id: 1, name: "Peppermint Pepperoni Roll", desc: "With real pepperonis!", price: 3, image: "" },
         {id: 2, name: "Wild Ramp", desc: "Smelly but tasty.", price: 3, image: "" },
@@ -73,7 +72,7 @@ export const getDrinks = () => {
 }
 
 export const getFoods =() => {
-    return database.getFoods.map(f => ({...f}))
+    return database.getFoods.map(foods => ({...foods}))
 }
 
 export const getDesserts = () => {
