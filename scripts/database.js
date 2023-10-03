@@ -1,6 +1,13 @@
 const database = {
-    transientState: {}
+    transientState: {},
+    drinks: [
+        {id: 1, name: "", desc: "", price: 0, image: "" },
+        {id: 1, name: "", desc: "", price: 0, image: "" },
+        {id: 1, name: "", desc: "", price: 0, image: "" },
+        {id: 1, name: "", desc: "", price: 0, image: "" },
+]
 }
+export getDrinks = 
 
 export const setLocation = (locationId) => {
     database.transientState.selectedLocation = locationId
