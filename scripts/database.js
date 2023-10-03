@@ -2,6 +2,7 @@ const database = {
     
 
     transientState: {},
+    
     desserts: [
         {id: 1, name: "Peppermint Pepperoni Roll", desc: "With real pepperonis!", price: 3, image: "" },
         {id: 2, name: "Wild Ramp", desc: "Smelly but tasty.", price: 3, image: "" },
@@ -79,13 +80,13 @@ export const setDrink = (drinkId) => {
 }
 
 export const getFoods =() => {
-    return database.getFoods.map(f => ({...f}))
+    return database.getFoods.map(foods => ({...foods}))
 }
 
-export const setFoods = (foodsId) => {
-    database.transientState.selectedLocation = locationId
-    document.dispatchEvent(new CustomEvent("stateChanged"))
-}
+ export const setFoods = (foodsId) => {
+     database.transientState.selectedLocation = foodsId
+     document.dispatchEvent(new CustomEvent("stateChanged"))
+ }
 
 export const setLocation = (locationId) => {
     database.transientState.selectedLocation = locationId
