@@ -1,7 +1,5 @@
 const database = {
     transientState: {},
-<<<<<<< HEAD
-=======
     drinks: [
         {id: 1, name: "Aldebaran Whiskey", desc: "", price: 3, image: "" },
         {id: 1, name: "Darmok and Gelatto", desc: "", price: 4, image: "" },
@@ -9,7 +7,6 @@ const database = {
         {id: 1, name: "Bantha Milk", desc: "", price: 2, image: "" },
 ],
 
->>>>>>> main
 
     locations: [
         { id: 1, name: "Gotham City"},
@@ -20,6 +17,10 @@ const database = {
 }
 export const getDrinks = () => {
     database.drinks.map(drink => ({...drink}))
+}
+export const setDrink = (drinkId) => {
+    database.transientState.selectedDrink = drinkId
+    document.dispatchEvent( new CustomEvent("stateChanged") )
 }
 
 export const setLocation = (locationId) => {
