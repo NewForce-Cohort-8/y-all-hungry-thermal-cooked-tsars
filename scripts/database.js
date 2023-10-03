@@ -1,5 +1,12 @@
 const database = {
     transientState: {}
+
+    locations: [
+        { id: 1, name: "Gotham City"},
+        { id: 2, name: "Naboo"},
+        { id: 3, name: "Central Perk"},
+        { id: 4, name: "Starfleet Headquarters"}
+    ]
 }
 
 export const setLocation = (locationId) => {
