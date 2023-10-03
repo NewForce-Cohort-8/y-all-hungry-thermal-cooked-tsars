@@ -5,10 +5,33 @@ const database = {
 
     transientState: {},
     desserts: [
-        {id: 1, name: "Peppermint Pepperoni Roll", desc: "With real pepperonis!", price: 3, image: "" },
-        {id: 2, name: "Wild Ramp", desc: "Smelly but tasty.", price: 3, image: "" },
-        {id: 3, name: "Beans and Cornbread", desc: "Just like Grandma's house. ", price: 2, image: "" },
-        {id: 4, name: "Coal", desc: "Don't ask questions.", price: 1, image: "" },
+        {
+            id: 1, 
+            name: "Peppermint Pepperoni Roll", 
+            desc: "With real pepperonis!", 
+            price: 3, 
+            image: "https://jahzkitchen.com/wp-content/uploads/2020/04/Pizza-Dogs-with-Fried-Hot-Dog.jpg"
+         },
+        {
+            id: 2, 
+            name: "Wild Ramp", 
+            desc: "Smelly but tasty.", 
+            price: 3, 
+            image: "https://www.visitmountaineercountry.com/wp-content/uploads/2022/05/cburkhardt45-Instagram-3205-ig-18006239062406098-257x300.jpg" 
+        },
+        {
+            id: 3, 
+            name: "Beans and Cornbread", 
+            desc: "Just like Grandma's house. ", 
+            price: 2, 
+            image: "https://irepo.primecp.com/2015/06/226067/Hot-Dog-Cornbread-Casserole_MASTER_ID-1062618.jpg?v=1062618" 
+        },
+        {
+            id: 4, 
+            name: "Coal", 
+            desc: "Don't ask questions.", 
+            price: 1, 
+            image: "https://media.istockphoto.com/id/96648320/photo/burnt-hotdog.jpg?s=612x612&w=0&k=20&c=foEYHGYJDDW1Q-mcqMdBa6Ya_XlnOK1bQJix_mIXv_c=" },
     ],
 
     toys: [
