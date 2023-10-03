@@ -1,4 +1,5 @@
 const database = {
+<<<<<<< HEAD
     transientState: {},
     drinks: [
         {id: 1, name: "", desc: "", price: 0, image: "" },
@@ -6,6 +7,16 @@ const database = {
         {id: 1, name: "", desc: "", price: 0, image: "" },
         {id: 1, name: "", desc: "", price: 0, image: "" },
 ]
+=======
+    transientState: {}
+
+    locations: [
+        { id: 1, name: "Gotham City"},
+        { id: 2, name: "Naboo"},
+        { id: 3, name: "Central Perk"},
+        { id: 4, name: "Starfleet Headquarters"}
+    ]
+>>>>>>> 2edb63499be87bce1cefad456e6bf1dbfeb00559
 }
 export getDrinks = 
 
