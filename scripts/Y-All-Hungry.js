@@ -1,7 +1,7 @@
 //import { Orders } from "./Orders.js"
 import { Drinks } from "./drinks.js"
 
-export const KneelDiamonds = () => {
+export const YAllHungry= () => {
     return `
         <h1>Kneel Diamonds</h1>
         <section class="choices__location options">
@@ -32,7 +32,7 @@ export const KneelDiamonds = () => {
 
         <article class="customOrders">
             <h2>Custom Jewelry Orders</h2>
-            ${Orders()}
+          
         </article>
     `
 }
