@@ -1,5 +1,12 @@
 const database = {
-    transientState: {}
+    transientState: {},
+    drinks: [
+        {id: 1, name: "Aldebaran Whiskey", desc: "", price: 3, image: "" },
+        {id: 1, name: "Darmok and Gelatto", desc: "", price: 4, image: "" },
+        {id: 1, name: "Romulan Ale", desc: "", price: 1, image: "" },
+        {id: 1, name: "Bantha Milk", desc: "", price: 2, image: "" },
+],
+
 
     locations: [
         { id: 1, name: "Gotham City"},
@@ -8,6 +15,9 @@ const database = {
         { id: 4, name: "Starfleet Headquarters"}
     ]
 }
+export const getDrinks = () => {
+    database.drinks.map(drink => ({...drink}))
+}
 
 export const setLocation = (locationId) => {
     database.transientState.selectedLocation = locationId
@@ -15,7 +25,7 @@ export const setLocation = (locationId) => {
 }
 
 export const getLocations = () => {
-    return database.getLocations.map(f => ({...f}))
+    return database.locations.map(f => ({...f}))
 }
 
 export const completeOrder = () => {
