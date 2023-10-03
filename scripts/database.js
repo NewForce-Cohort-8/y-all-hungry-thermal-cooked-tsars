@@ -1,6 +1,5 @@
 const database = {
     transientState: {},
-<<<<<<< HEAD
 
     toys: [
         {
@@ -31,22 +30,15 @@ const database = {
             price: 3,
             image: "https://images.squarespace-cdn.com/content/v1/54e4cf18e4b0706bb3dfd921/1425504587316-WGA57Z770NWV9BES55TL/Dallas+Rat+Control"
         },
-        {
-        }
-    ]
-}
-
-export const getToys = () => {
-    database.toys.map(toys => ({...toys}))
-=======
+    ],
     drinks: [
         {id: 1, name: "Aldebaran Whiskey", desc: "", price: 3, image: "" },
         {id: 1, name: "Darmok and Gelatto", desc: "", price: 4, image: "" },
         {id: 1, name: "Romulan Ale", desc: "", price: 1, image: "" },
         {id: 1, name: "Bantha Milk", desc: "", price: 2, image: "" },
-],
-
-
+    ],
+    
+    
     locations: [
         { id: 1, name: "Gotham City"},
         { id: 2, name: "Naboo"},
@@ -54,9 +46,17 @@ export const getToys = () => {
         { id: 4, name: "Starfleet Headquarters"}
     ]
 }
+
+export const setToy = (toyId) => {
+    database.transientState.selectedToy = toyId;
+    document.dispatchEvent(new CustomEvent("stateChanged"));
+}
+
+export const getToys = () => {
+    database.toys.map(toys => ({...toys}))}
+
 export const getDrinks = () => {
     database.drinks.map(drink => ({...drink}))
->>>>>>> main
 }
 
 export const setLocation = (locationId) => {
