@@ -63,7 +63,7 @@ const database = {
     
 }
 
-//The DB will maintain the state, but the getter functions will export a copy of state to other modules to use for their purposes://
+//The DB will maintain the state, but the getter and setter functions will export a copy of state to other modules to use for their purposes://
 export const getToys = () => {
     database.toys.map(toys => ({...toys}))
 }
@@ -76,37 +76,36 @@ export const getFoods =() => {
     return database.getFoods.map(f => ({...f}))
 }
 
+export const getDesserts = () => {
+    database.desserts.map(dessert => ({...dessert}))
+}
+
 export const getLocations = () => {
     return database.locations.map(f => ({...f}))
 }
 
+export const setToy = (toyId) => {
+    database.transientState.selectedToy = toyId;
+    document.dispatchEvent(new CustomEvent("stateChanged"));
+}
 
-    export const setToy = (toyId) => {
-        database.transientState.selectedToy = toyId;
-        document.dispatchEvent(new CustomEvent("stateChanged"));
-    }
 export const setDrink = (drinkId) => {
     database.transientState.selectedDrink = drinkId
     document.dispatchEvent( new CustomEvent("stateChanged") )
 }
-
 
 export const setFoods = (foodsId) => {
     database.transientState.selectedLocation = foodsId
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
-export const setLocation = (locationId) => {
-    database.transientState.selectedLocation = locationId
+export const setDessert = (dessertId) => {
+    database.transientState.selecteddessert = dessertId
     document.dispatchEvent( new CustomEvent("stateChanged") )
 }
 
-export const getDesserts = () => {
-    database.desserts.map(dessert => ({...dessert}))
-}
-
-export const setDessert = (dessertId) => {
-    database.transientState.selecteddessert = dessertId
+export const setLocation = (locationId) => {
+    database.transientState.selectedLocation = locationId
     document.dispatchEvent( new CustomEvent("stateChanged") )
 }
 
