@@ -3,7 +3,7 @@ import { Drinks } from "./drinks.js"
 
 export const YAllHungry= () => {
     return `
-        <h1>Kneel Diamonds</h1>
+        <h1>Trucks</h1>
         <section class="choices__location options">
         <h2>Locations</h2>
        
