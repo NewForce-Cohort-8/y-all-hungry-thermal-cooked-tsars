@@ -6,7 +6,7 @@ const desserts = getDesserts()
 document.addEventListener(
     "change",
     (changeEvent) => {
-        if (changeEvent.target.name === "dessert") {
+        if (changeEvent.target.name === "desserts") {
             setDessert(parseInt(changeEvent.target.value))
         }
     }
@@ -20,7 +20,7 @@ export const Desserts = () => {
         const listItems = desserts.map
         (desserts => {
             return `
-               <option value="${desserts.id}'> ${desserts.name}</option>`
+               <option value="${desserts.id}">${desserts.name} $${dessert.price}</option>`
         })
         html += listItems.join("")
         html += "</select>"
