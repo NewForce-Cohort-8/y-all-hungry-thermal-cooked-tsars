@@ -118,7 +118,7 @@ export const setDrink = (drinkId) => {
 }
 
 export const setFoods = (foodsId) => {
-    database.transientState.selectedLocation = foodsId
+    database.transientState.selectedFood = foodsId
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
