@@ -17,7 +17,7 @@ export const Desserts = () => {
 
     
     for (const dessert of desserts) {
-        html += `
+        html += 
         <select id="desserts">
     <option value="0">Prompt to select resource...</option>
     <option value="1">${dessert.id} ${dessert.name}{</option>
