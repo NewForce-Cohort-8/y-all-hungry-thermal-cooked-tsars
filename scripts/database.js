@@ -47,10 +47,35 @@ const database = {
     ],
 
     foods: [
-    { id: 1, name: "The Mothman", desc: "A hot dog with beans and two pepperoni eyes on top", price: 3, img: ""},
-    { id: 2, name: "The Casa Grande Special", desc: "Definitely not just a taco", price: 3.5, img: ""},
-    { id: 3, name: "The Kirk Dog", desc: "Ripped shirt not included, but the William Shatner tax is", price: 8, img: ""},
-    { id: 4, name: "Hallowieners", desc: "Our spooky special", price: 2, img: ""}
+    { 
+        id: 1, 
+        name: "The Mothman", 
+        desc: "A hot dog with beans and two pepperoni eyes on top", 
+        price: 3, 
+        img: ""
+    },
+    { 
+        id: 2, 
+        name: "The Casa Grande Special", 
+        desc: "Definitely not just a taco", 
+        price: 3.5, 
+        img: ""
+    },
+
+    { 
+        id: 3, 
+        name: "The Kirk Dog", 
+        desc: "Ripped shirt not included, but the William Shatner tax is", 
+        price: 8, 
+        img: ""
+    },
+    { 
+        id: 4, 
+        name: "Hallowieners", 
+        desc: "Our spooky special", 
+        price: 2, 
+        img: ""
+    }
     ],
 
     locations: [
@@ -64,15 +89,15 @@ const database = {
 
 //The DB will maintain the state, but the getter and setter functions will export a copy of state to other modules to use for their purposes://
 export const getToys = () => {
-    return database.toys.map(toys => ({...toys}))
+    return database.toys.map(toy => ({...toy}))
 }
     
 export const getDrinks = () => {
     return database.drinks.map(drink => ({...drink}))
 }
 
-export const getFoods =() => {
-    return database.getFoods.map(foods => ({...foods}))
+export const getFoods = () => {
+    return database.foods.map(food => ({...food}))
 }
 
 export const getDesserts = () => {
