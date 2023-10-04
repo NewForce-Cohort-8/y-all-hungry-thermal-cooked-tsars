@@ -5,8 +5,8 @@ const desserts = getDesserts()
 
 document.addEventListener(
     "change",
-    (event) => {
-        if (event.target.name === "dessert") {
+    (changeEvent) => {
+        if (changeEvent.target.id === "dessert") {
             setDessert(parseInt(event.target.value))
         }
     }
