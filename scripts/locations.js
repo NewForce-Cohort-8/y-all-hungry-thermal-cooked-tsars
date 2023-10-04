@@ -1,4 +1,4 @@
-import { getLocations, setLocation } from "./database";
+import { getLocations, setLocation } from "./database.js";
 
 const locations = getLocations()
 
@@ -12,7 +12,7 @@ document.addEventListener(
 )
 
 export const Locations = () => {
-    let html = "<h2>Locations</h2>"
+    let html = "<h2></h2>"
     html += "<select id='locations'>"
     html += '<option value="0">Please Select Your Option...</option>'
         

@@ -4,7 +4,7 @@ import { Locations } from "./locations.js"
 
 export const YAllHungry= () => {
     return `
-        <h1>Trucks</h1>
+        <h1>TCT Food Trucks</h1>
         <section class="choices__location options">
         <h2>Locations</h2>
         ${Locations()}
