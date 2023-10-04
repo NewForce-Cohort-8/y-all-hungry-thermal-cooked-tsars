@@ -22,7 +22,7 @@ export const YAllHungry= () => {
         </section>
             <section class="choices__toy options">
                 <h2>toys</h2>
-               
+               ${toys()}
             </section>
         </article>
 

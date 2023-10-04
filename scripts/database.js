@@ -62,22 +62,11 @@ const database = {
     
 }
 
-<<<<<<< HEAD
-export const setToys = (toyId) => {
-    database.transientState.selectedToy = toyId;
-    document.dispatchEvent(new CustomEvent("stateChanged"));
-}
-
-export const getToy = () => {
-    database.toys.map(toys => ({...toys}))}
-
-=======
 //The DB will maintain the state, but the getter and setter functions will export a copy of state to other modules to use for their purposes://
 export const getToys = () => {
     database.toys.map(toys => ({...toys}))
 }
     
->>>>>>> ec765a82247ee13861eb6e158e913c3e823c9744
 export const getDrinks = () => {
     database.drinks.map(drink => ({...drink}))
 }
