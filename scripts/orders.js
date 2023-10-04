@@ -1,15 +1,13 @@
+// Import getFoods and getDesserts below
 import { getLocations, getDrinks } from "./database.js";
 
+// Add getFoods and getDesserts
 const buildOrderListItem = (order) => {
     const locations = getLocations()
     const drinks = getDrinks()
 
 
-    const foundLocation = locations.find(
-        (location) => {
-            return location.id === order.locationId
-        }
-    )
+    // Code for foundFood and foundDessert below
     const foundDrink = drinks.find(
         (drink) => {
             return drink.id === order.drinkId
