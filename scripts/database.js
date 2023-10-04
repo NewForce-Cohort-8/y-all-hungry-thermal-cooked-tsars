@@ -64,7 +64,7 @@ const database = {
 
 //The DB will maintain the state, but the getter and setter functions will export a copy of state to other modules to use for their purposes://
 export const getToys = () => {
-    return database.toys.map(toys => ({...toys}))
+    return database.toys.map(toy => ({...toy}))
 }
     
 export const getDrinks = () => {

@@ -1,6 +1,6 @@
 import { setToy, getToys } from "./database.js"
 
-const toys = getToys
+const toys = getToys()
 
 document.addEventListener(
     "change",
@@ -9,18 +9,18 @@ document.addEventListener(
             setToy(parseInt(event.target.value))
         }
     }
-);
+)
 
-export const toy = () => {
-    let html = "<ul>"
+export const Toys = () => {
+    let html = "<h2></h2>"
+    html += "<select id='toys'>"
+    html += `<option value = "0">Choose a toy...</option>`
 
-    // converts objects to <li> elements
-    for (const toy of toys) {
-        html += `<li>
-            <input type="radio" name="toy" value="${toy.id}" /> ${toy.name}
-        </li>`
+    const listItems = toys.map(toy => {
+        return `<option value="${toy.id}"> ${toy.name} $${toy.price}</option>`})
+        html += listItems.join("")
+        html += "</select>"
+        
+        return html
     }
-
-    html += "</select></section>"
-    return html
-}
+    console.log(Toys())
