@@ -29,7 +29,17 @@ export const Foods = () => {
 document.addEventListener(
     "change",
     (changeEvent) => {
-        if (changeEvent.target.id === "foods") {
+        if (changeEvent.target.id === "foods")) {
+const buildOrderListItem = (order) => {
+    const foods = getFoods()
+}
+}
+
+
+document.addEventListener(
+    "change",
+    (changeEvent) => {
+        if (changeEvent.target.id === "resource") {
             const chosenOption = changeEvent.target.value
             console.log(chosenOption)
         }
