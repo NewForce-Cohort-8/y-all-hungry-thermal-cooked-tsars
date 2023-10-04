@@ -13,17 +13,16 @@ document.addEventListener(
 )
 
 export const Drinks = () => {
-    let html = "<ul>"
-
-    // This is how you have been converting objects to <li> elements
-    for (const drink of drinks) {
-        html += `
-        <select id="drinks">
-    <option value="0">Prompt to select resource...</option>
-    <option value="1">${drink.id} ${drink.name}{</option>
-    </select>`
+    let html = "<h2></h2>"
+    html += "<select id='drinks'>"
+    html += '<option value="0">Please Select Your Option...</option>'
+        const listItems = drinks.map(drinks => {
+            return `
+                <option value="${drinks.id}"> ${drinks.name}- $${drinks.price}</option>`
+        })
+        html += listItems.join("")
+        html += "</select>"
+        return html
     }
 
-    html += "</ul>"
-    return html
-}
+
