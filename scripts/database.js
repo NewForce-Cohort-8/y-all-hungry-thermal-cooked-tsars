@@ -68,7 +68,7 @@ export const getToys = () => {
 }
     
 export const getDrinks = () => {
-    database.drinks.map(drink => ({...drink}))
+    return database.drinks.map(drink => ({...drink}))
 }
 
 export const getFoods =() => {
