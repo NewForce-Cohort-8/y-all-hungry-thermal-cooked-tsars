@@ -18,7 +18,7 @@ export const Foods = () => {
     <option value = "0">Select your hawt dog</option>`;
 
     for (const food of foods) {
-        html += `option value = "${food.id}">${food.name}<option>`;
+        html += `<option value = "${food.id}">${food.name} $${food.price}<option>`;
     }
 
     html += `</select>

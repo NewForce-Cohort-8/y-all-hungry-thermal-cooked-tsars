@@ -96,8 +96,8 @@ export const getDrinks = () => {
     return database.drinks.map(drink => ({...drink}))
 }
 
-export const getFoods =() => {
-    return database.getFoods.map(foods => ({...foods}))
+export const getFoods = () => {
+    return database.foods.map(food => ({...food}))
 }
 
 export const getDesserts = () => {
