@@ -61,7 +61,6 @@ const database = {
         price: 3.5, 
         img: ""
     },
-
     { 
         id: 3, 
         name: "The Kirk Dog", 

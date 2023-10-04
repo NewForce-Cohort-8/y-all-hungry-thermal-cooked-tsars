@@ -12,16 +12,17 @@ document.addEventListener(
 );
 
 export const Foods = () => {
-    let html = `<div class = "-">
-    <h2>Food Options</h2>
-    <select id = "food-select" name = "foods">
-    <option value = "0">Select your hawt dog</option>`;
+    let html = "<h2></h2>"
+    html += "<select id='foods'>"
+    html += '<option value="0">Select your hawt dog</option>'
 
-    for (const food of foods) {
-        html += `<option value = "${food.id}">${food.name} $${food.price}<option>`;
-    }
+    const listItems = foods.map(foods => {
+        return `
+        <option value = "${foods.id}">${foods.name} $${foods.price}<option>`;
+    })
 
-    html += `</select>
-    </div>`
+    html += listItems.join("")
+    html += "</select>"
+    
     return html;
 }
