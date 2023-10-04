@@ -63,12 +63,12 @@ const database = {
     
 }
 
-export const setToy = (toyId) => {
+export const setToys = (toyId) => {
     database.transientState.selectedToy = toyId;
     document.dispatchEvent(new CustomEvent("stateChanged"));
 }
 
-export const getToys = () => {
+export const getToy = () => {
     database.toys.map(toys => ({...toys}))}
 
 export const getDrinks = () => {

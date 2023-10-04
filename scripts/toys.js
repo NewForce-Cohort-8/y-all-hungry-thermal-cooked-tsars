@@ -1,4 +1,4 @@
-import { toys } from "./database.js"
+import { getToy } from "./database.js"
 
 
 
