@@ -1,10 +1,11 @@
 // Import getFoods and getDesserts below
-import { getLocations, getDrinks } from "./database.js";
+import { getLocations, getDrinks, getToys } from "./database.js";
 
 // Add getFoods and getDesserts
 const buildOrderListItem = (order) => {
     const locations = getLocations()
     const drinks = getDrinks()
+    const toys = getToys()
 
 
     // Code for foundFood and foundDessert below

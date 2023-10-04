@@ -9,7 +9,7 @@ document.addEventListener(
             setToy(parseInt(event.target.value))
         }
     }
-)
+);
 
 export const toy = () => {
     let html = "<ul>"
