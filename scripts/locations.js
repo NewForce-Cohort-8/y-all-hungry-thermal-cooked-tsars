@@ -1,4 +1,4 @@
-import { getLocations, setLocation } from "./database";
+import { getLocations, setLocation } from "./database.js";
 
 const locations = getLocations()
 

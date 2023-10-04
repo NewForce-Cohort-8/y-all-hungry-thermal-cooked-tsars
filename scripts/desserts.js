@@ -6,8 +6,8 @@ const desserts = getDesserts()
 document.addEventListener(
     "change",
     (changeEvent) => {
-        if (changeEvent.target.id === "dessert") {
-            setDessert(parseInt(event.target.value))
+        if (changeEvent.target.name === "dessert") {
+            setDessert(parseInt(changeEvent.target.value))
         }
     }
 )
@@ -18,7 +18,7 @@ export const Desserts = () => {
     
     for (const dessert of desserts) {
         html += `
-        <select id="drinks">
+        <select id="desserts">
     <option value="0">Prompt to select resource...</option>
     <option value="1">${dessert.id} ${dessert.name}{</option>
     </select>`
