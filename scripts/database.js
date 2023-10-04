@@ -1,8 +1,6 @@
 const database = {
     
-
     transientState: {},
-    
     desserts: [
         {id: 1, name: "Peppermint Pepperoni Roll", desc: "With real pepperonis!", price: 3, image: "" },
         {id: 2, name: "Wild Ramp", desc: "Smelly but tasty.", price: 3, image: "" },
@@ -40,19 +38,20 @@ const database = {
             image: "https://images.squarespace-cdn.com/content/v1/54e4cf18e4b0706bb3dfd921/1425504587316-WGA57Z770NWV9BES55TL/Dallas+Rat+Control"
         },
     ],
+
     drinks: [
         {id: 1, name: "Aldebaran Whiskey", desc: "", price: 3, image: "" },
         {id: 1, name: "Darmok and Gelatto", desc: "", price: 4, image: "" },
         {id: 1, name: "Romulan Ale", desc: "", price: 1, image: "" },
         {id: 1, name: "Bantha Milk", desc: "", price: 2, image: "" },
-],
+    ],
 
     foods: [
     { id: 1, name: "The Mothman", desc: "A hot dog with beans and two pepperoni eyes on top", price: 3, img: ""},
     { id: 2, name: "The Casa Grande Special", desc: "Definitely not just a taco", price: 3.5, img: ""},
     { id: 3, name: "The Kirk Dog", desc: "Ripped shirt not included, but the William Shatner tax is", price: 8, img: ""},
     { id: 4, name: "Hallowieners", desc: "Our spooky special", price: 2, img: ""}
-],
+    ],
 
     locations: [
         { id: 1, name: "Gotham City"},
@@ -63,6 +62,7 @@ const database = {
     
 }
 
+<<<<<<< HEAD
 export const setToys = (toyId) => {
     database.transientState.selectedToy = toyId;
     document.dispatchEvent(new CustomEvent("stateChanged"));
@@ -71,37 +71,51 @@ export const setToys = (toyId) => {
 export const getToy = () => {
     database.toys.map(toys => ({...toys}))}
 
+=======
+//The DB will maintain the state, but the getter and setter functions will export a copy of state to other modules to use for their purposes://
+export const getToys = () => {
+    database.toys.map(toys => ({...toys}))
+}
+    
+>>>>>>> ec765a82247ee13861eb6e158e913c3e823c9744
 export const getDrinks = () => {
     database.drinks.map(drink => ({...drink}))
-}
-export const setDrink = (drinkId) => {
-    database.transientState.selectedDrink = drinkId
-    document.dispatchEvent( new CustomEvent("stateChanged") )
 }
 
 export const getFoods =() => {
     return database.getFoods.map(foods => ({...foods}))
 }
 
- export const setFoods = (foodsId) => {
-     database.transientState.selectedLocation = foodsId
-     document.dispatchEvent(new CustomEvent("stateChanged"))
- }
-
-export const setLocation = (locationId) => {
-    database.transientState.selectedLocation = locationId
-    document.dispatchEvent( new CustomEvent("stateChanged") )
+export const getDesserts = () => {
+    database.desserts.map(dessert => ({...dessert}))
 }
 
 export const getLocations = () => {
     return database.locations.map(f => ({...f}))
 }
-export const getDesserts = () => {
-    database.desserts.map(dessert => ({...dessert}))
+
+export const setToy = (toyId) => {
+    database.transientState.selectedToy = toyId;
+    document.dispatchEvent(new CustomEvent("stateChanged"));
+}
+
+export const setDrink = (drinkId) => {
+    database.transientState.selectedDrink = drinkId
+    document.dispatchEvent( new CustomEvent("stateChanged") )
+}
+
+export const setFoods = (foodsId) => {
+    database.transientState.selectedLocation = foodsId
+    document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
 export const setDessert = (dessertId) => {
     database.transientState.selecteddessert = dessertId
+    document.dispatchEvent( new CustomEvent("stateChanged") )
+}
+
+export const setLocation = (locationId) => {
+    database.transientState.selectedLocation = locationId
     document.dispatchEvent( new CustomEvent("stateChanged") )
 }
 
