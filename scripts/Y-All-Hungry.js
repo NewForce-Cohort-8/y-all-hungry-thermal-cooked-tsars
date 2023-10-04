@@ -1,6 +1,7 @@
 //import { Orders } from "./Orders.js"
 import { Drinks } from "./drinks.js"
 import { Locations } from "./locations.js"
+import { Toys } from "./toys.js"
 import { Foods } from "./foods.js"
 import { Desserts } from "./desserts.js"
 
@@ -24,9 +25,9 @@ export const YAllHungry= () => {
             <h2>Desserts</h2>
           
         </section>
-            <section class="choices__toy options">
-                <h2>toys</h2>
-               
+            <section class="choices__toys options">
+                <h2>Toys</h2>
+                ${Toys()}
             </section>
         </article>
 
