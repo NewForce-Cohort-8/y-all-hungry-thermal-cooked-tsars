@@ -13,17 +13,16 @@ document.addEventListener(
 )
 
 export const Desserts = () => {
-    let html = "<ul>"
+    let html = "<h2></h2>"
+    html += "select id='desserts'>"
+    html += '<option value="0">Please Select Your Ice Cream</option>'
 
-    
-    for (const dessert of desserts) {
-        html += 
-        <select id="desserts">
-    <option value="0">Prompt to select resource...</option>
-    <option value="1">${dessert.id} ${dessert.name}{</option>
-    </select>`
-    }
-
-    html += "</ul>"
-    return html
+        const listItems = desserts.map
+        (desserts => {
+            return `
+               <option value="${desserts.id}'> ${desserts.name}</option>`
+        })
+        html += listItems.join("")
+        html += "</select>"
+        return html
 }
