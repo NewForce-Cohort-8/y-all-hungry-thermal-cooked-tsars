@@ -13,8 +13,8 @@ document.addEventListener(
 )
 
 export const Drinks = () => {
-    let html = ""
-    html += "<select name='drink' id='drinks'>"
+    let html = "<h2></h2>"
+    html += "<select id='drinks'>"
     html += '<option value="0">Please Select Your Option...</option>'
         const listItems = drinks.map(drinks => {
             return `
