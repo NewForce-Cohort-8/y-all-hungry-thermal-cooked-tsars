@@ -3,6 +3,7 @@ import { Drinks } from "./drinks.js"
 import { Locations } from "./locations.js"
 import { Toys } from "./toys.js"
 import { Foods } from "./foods.js"
+import { Desserts } from "./desserts.js"
 
 export const YAllHungry= () => {
     return `
@@ -22,7 +23,7 @@ export const YAllHungry= () => {
             </section>
             <section class="choices__dessert options">
             <h2>Desserts</h2>
-          
+               ${Desserts()}
         </section>
             <section class="choices__toys options">
                 <h2>Toys</h2>
