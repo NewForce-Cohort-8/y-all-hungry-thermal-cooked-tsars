@@ -7,7 +7,7 @@ const drinkLocs =getdrinksLoc()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "drink") {
+        if (event.target.id === "drink") {
             setDrink(parseInt(event.target.value))
         }
     }
