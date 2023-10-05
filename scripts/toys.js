@@ -6,7 +6,7 @@ const toysLocs = getToysLoc()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.id === "toy") {
+        if (event.target.id === "toys") {
             setToy(parseInt(event.target.value))
         }
     }
