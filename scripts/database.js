@@ -28,7 +28,14 @@ const database = {
             name: "Coal", 
             desc: "Don't ask questions.", 
             price: 1, 
-            image: "https://www.shape.com/thmb/5bLMoEJv0e7Z9mjmZLaOsZkrfOA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/shutterstock_363973853_0-875a16a0046d42b4ad5a3d88452789f1.jpg" },
+            image: "https://www.shape.com/thmb/5bLMoEJv0e7Z9mjmZLaOsZkrfOA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/shutterstock_363973853_0-875a16a0046d42b4ad5a3d88452789f1.jpg" 
+        },
+        {
+            id: 5, 
+            name: "None",
+            desc: "I find all of these options disturbing",
+            price: 0
+        },
     ],
 
     toys: [
