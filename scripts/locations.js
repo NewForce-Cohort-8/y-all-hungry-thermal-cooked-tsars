@@ -5,7 +5,7 @@ const locations = getLocations()
 document.addEventListener(
     "change",
     (event) => {
-        if( event.target.name === "locations") {
+        if( event.target.id === "locations") {
             setLocation(parseInt(event.target.value))
         }
     }

@@ -1,4 +1,4 @@
-//import { Orders } from "./Orders.js"
+// import { Orders } from "./orders.js"
 import { Drinks } from "./drinks.js"
 import { Locations } from "./locations.js"
 import { Toys } from "./toys.js"
@@ -36,8 +36,8 @@ export const YAllHungry= () => {
         </article>
 
         <article class="customOrders">
-            <h2>Custom Orders</h2>
-          
+            <h2>Order Meal</h2>
+ 
         </article>
     `
 }

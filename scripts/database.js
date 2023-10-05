@@ -1,6 +1,7 @@
 const database = {
     
     transientState: {},
+
     desserts: [
         {
             id: 1, 
@@ -71,9 +72,9 @@ const database = {
 
     drinks: [
         {id: 1, name: "Aldebaran Whiskey", desc: "", price: 3, image: "" },
-        {id: 1, name: "Darmok and Gelatto", desc: "", price: 4, image: "" },
-        {id: 1, name: "Romulan Ale", desc: "", price: 1, image: "" },
-        {id: 1, name: "Bantha Milk", desc: "", price: 2, image: "" },
+        {id: 2, name: "Darmok and Gelatto", desc: "", price: 4, image: "" },
+        {id: 3, name: "Romulan Ale", desc: "", price: 1, image: "" },
+        {id: 4, name: "Bantha Milk", desc: "", price: 2, image: "" },
     ],
 
     foods: [
@@ -118,6 +119,39 @@ const database = {
         { id: 3, name: "Central Perk"},
         { id: 4, name: "Starfleet Headquarters"}
     ],
+    foodsLoc: [
+        {id: 1, foodId: 1, locationId: 1, quantity: 4},
+        {id: 2, foodId: 1, locationId: 2, quantity: 4},
+        {id: 3, foodId: 2, locationId: 1, quantity: 4}, 
+        {id: 4, foodId: 2, locationId: 2, quantity: 4}
+    ],
+    drinksLoc:[
+        {id: 1, drinkId: 2, locationId: 4, quantity: 2}, 
+        {id: 2, drinkId: 2, locationId: 2, quantity: 0},
+        {id: 3, drinkId: 4, locationId: 2, quantity: 2},
+        {id: 4, drinkId: 4, locationId: 4, quantity: 0}
+    ],
+    dessertsLoc: [
+    {id: 1, dessertId: 1, locationId: 1, quantity: 10},
+    {id: 2, dessertId: 2, locationId: 2, quantity: 15},
+    {id: 3, dessertId: 3, locationId: 3, quantity: 10},
+    {id: 4, dessertId: 4, locationId: 4, quantity: 15}
+    ],
+    toysLoc: [
+        {id: 10, toyId: 1, locationId: 1, quantity: 10},
+        {id: 11, toyId: 2, locationId: 2, quantity: 15},
+        {id: 12, toyId: 3, locationId: 3, quantity: 10},
+        {id: 13, toyId: 4, locationId: 4, quantity: 5}
+    ],
+    customOrders: [
+        {
+            id: 1,
+            foodsId: 3,
+            locationId: 2,
+            quantity: 3,
+            timestamp: 1614659931693
+        }
+    ]
     
 }
 
@@ -142,6 +176,33 @@ export const getLocations = () => {
     return database.locations.map(f => ({...f}))
 }
 
+export const getOrders = () => {
+    return database.customOrders.map(order => ({...order}))
+}
+
+export const getfoodsLoc = () => {
+    return database.foodsLoc.map(foodOrder => ({...foodOrder}))
+}
+
+export const getdrinksLoc = () => {
+    return database.drinksLoc.map(drinkOrder => ({...drinkOrder}))
+}
+
+export const getdessertsLoc = () => {
+    return database.dessertsLoc.map(dessertOrder => ({...dessertOrder}))
+}
+
+export const getToysLoc = () => {
+    return database.toysLoc.map(toyOrder => ({...toyOrder}))
+}
+
+export const getTransientState = () =>{
+    const copyOfState = {...database.transientState}
+    return copyOfState
+}
+
+
+
 export const setToy = (toyId) => {
     database.transientState.selectedToy = toyId;
     document.dispatchEvent(new CustomEvent("stateChanged"));
@@ -165,5 +226,26 @@ export const setDessert = (dessertId) => {
 export const setLocation = (locationId) => {
     database.transientState.selectedLocation = locationId
     document.dispatchEvent( new CustomEvent("stateChanged") )
+}
+
+export const addCustomOrder = () => {
+    // Copy the current state of user choices
+    const newOrder = {...database.orderBuilder}
+
+    // Add a new primary key to the object
+    const lastIndex = database.customOrders.length - 1
+    newOrder.id = database.customOrders[lastIndex].id + 1
+
+    // Add a timestamp to the order
+    newOrder.timestamp = Date.now()
+
+    // Add the new order object to custom orders state
+    database.customOrders.push(newOrder)
+   
+    // Reset the temporary state for user choices
+    database.orderBuilder = {}
+
+    // Broadcast a notification that permanent state has changed
+    document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
