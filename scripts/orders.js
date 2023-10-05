@@ -1,17 +1,22 @@
 // Import getFoods and getDesserts below
-import { getLocations, getDrinks, getToys } from "./database.js";
+import { getLocations, getDrinks, getToys, getDesserts } from "./database.js";
 
 // Add getFoods and getDesserts
 const buildOrderListItem = (order) => {
     const locations = getLocations()
     const drinks = getDrinks()
     const toys = getToys()
-
+    const desserts = getDesserts()
 
     // Code for foundFood and foundDessert below
     const foundDrink = drinks.find(
         (drink) => {
             return drink.id === order.drinkId
+        }
+    )
+    const foundDessert = desserts.find(
+        (dessert) => {
+            return dessert.id === order.dessertId
         }
     )
     const totalCost = foundDrink.price + foundFood.price + foundDessert.price
