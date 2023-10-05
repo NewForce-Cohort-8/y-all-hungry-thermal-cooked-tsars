@@ -14,13 +14,13 @@ document.addEventListener(
 
 export const Desserts = () => {
     let html = "<h2></h2>"
-    html += "select id='desserts'>"
+    html += "<select id='desserts'>"
     html += '<option value="0">Please Select Your Ice Cream</option>'
 
         const listItems = desserts.map
-        (desserts => {
+        (dessert => {
             return `
-               <option value="${desserts.id}">${desserts.name} $${dessert.price}</option>`
+               <option value="${dessert.id}">${dessert.name} $${dessert.price}</option>`
         })
         html += listItems.join("")
         html += "</select>"

@@ -23,7 +23,7 @@ export const YAllHungry= () => {
             </section>
             <section class="choices__dessert options">
             <h2>Desserts</h2>
-          
+               ${Desserts()}
         </section>
             <section class="choices__toys options">
                 <h2>Toys</h2>
