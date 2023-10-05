@@ -97,6 +97,11 @@ const database = {
         desc: "Our spooky special", 
         price: 2, 
         img: ""
+    },
+    {
+        id: 5, 
+        name: "No hawt dog for me",
+        price: 0
     }
     ],
 
