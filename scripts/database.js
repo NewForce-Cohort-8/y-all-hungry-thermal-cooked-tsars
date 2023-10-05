@@ -37,6 +37,13 @@ const database = {
             price: 3,
             image: "https://images.squarespace-cdn.com/content/v1/54e4cf18e4b0706bb3dfd921/1425504587316-WGA57Z770NWV9BES55TL/Dallas+Rat+Control"
         },
+        {
+            id: 14,
+            name: "None",
+            desc: "No toy chosen",
+            price: 0,
+            image: "https://promoagogo.files.wordpress.com/2010/11/matchboxno.jpg"
+        },
     ],
 
     drinks: [

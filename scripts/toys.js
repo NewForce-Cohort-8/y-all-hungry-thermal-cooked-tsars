@@ -5,7 +5,7 @@ const toys = getToys()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "toy") {
+        if (event.target.id === "toy") {
             setToy(parseInt(event.target.value))
         }
     }
@@ -23,4 +23,3 @@ export const Toys = () => {
         
         return html
     }
-    console.log(Toys())
