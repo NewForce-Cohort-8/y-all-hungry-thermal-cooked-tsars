@@ -8,7 +8,6 @@ document.addEventListener(
     (event) => {
         if (event.target.name === "drink") {
             setDrink(parseInt(event.target.value))
-                console.log(chosenOption)
         }
     }
 )
