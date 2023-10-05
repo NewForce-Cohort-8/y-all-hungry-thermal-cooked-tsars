@@ -84,7 +84,6 @@ const database = {
         price: 3.5, 
         img: ""
     },
-
     { 
         id: 3, 
         name: "The Kirk Dog", 
@@ -98,6 +97,11 @@ const database = {
         desc: "Our spooky special", 
         price: 2, 
         img: ""
+    },
+    {
+        id: 5, 
+        name: "No hawt dog for me",
+        price: 0
     }
     ],
 
@@ -142,7 +146,7 @@ export const setDrink = (drinkId) => {
 }
 
 export const setFoods = (foodsId) => {
-    database.transientState.selectedLocation = foodsId
+    database.transientState.selectedFood = foodsId
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
