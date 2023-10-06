@@ -82,6 +82,7 @@ const database = {
         {id: 2, name: "Darmok and Gelatto", desc: "", price: 4, image: "" },
         {id: 3, name: "Romulan Ale", desc: "", price: 1, image: "" },
         {id: 4, name: "Bantha Milk", desc: "", price: 2, image: "" },
+        {id: 5, name: "nothing", desc: "", price: 0, image: ""}
     ],
 
     foods: [

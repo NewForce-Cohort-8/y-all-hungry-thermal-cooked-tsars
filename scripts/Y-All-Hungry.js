@@ -8,7 +8,7 @@ import { Desserts } from "./desserts.js"
 export const YAllHungry= () => {
     return `
         <h1>TCT Food Trucks</h1>
-        <section class="choices__location options">
+        <section class="choices__locations options">
         <h2>Locations</h2>
         ${Locations()}
        
@@ -21,7 +21,7 @@ export const YAllHungry= () => {
                 <h2>Drinks</h2>
                 ${Drinks()}
             </section>
-            <section class="choices__dessert options">
+            <section class="choices__desserts options">
             <h2>Desserts</h2>
                ${Desserts()}
         </section>
