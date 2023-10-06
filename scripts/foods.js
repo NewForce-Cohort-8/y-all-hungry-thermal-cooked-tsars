@@ -1,4 +1,4 @@
-import { getFoods, setFoods } from "./database.js"
+import { getFoods, setFood } from "./database.js"
 
 const foods = getFoods()
 
@@ -6,7 +6,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.id === "foods") {
-            setFoods(parseInt(event.target.value))
+            setFood(parseInt(event.target.value))
         }
     }
 )

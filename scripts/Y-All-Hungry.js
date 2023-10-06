@@ -4,6 +4,7 @@ import { Locations } from "./locations.js"
 import { Toys } from "./toys.js"
 import { Foods } from "./foods.js"
 import { Desserts } from "./desserts.js"
+import { selectFood } from "./selectFoods.js"
 import { selectLocation } from "./selectLocation.js"
 import { selectToy } from "./selectToy.js"
 import { selectDrink } from "./selectDrink.js"
@@ -48,7 +49,9 @@ export const YAllHungry= () => {
         <div class=selectDrink>
         ${selectDrink()}
         </div>
-
+        </div>
+        <div class=selectFood>
+        ${selectFood()}
         <div class=selectToy>
         ${selectToy()}
         </div>

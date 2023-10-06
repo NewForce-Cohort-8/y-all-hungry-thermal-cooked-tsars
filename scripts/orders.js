@@ -45,7 +45,7 @@ const buildOrderListItem = (order) => {
     })
     
     return `<li>
-        Your order #${order.id} will be $${costString}. Thank you .Have a nice day.
+        Your order #${order.id} will be $${costString}. Thank you. Have a nice day.
     </li>`       
     
 }
