@@ -4,11 +4,13 @@ import { Locations } from "./locations.js"
 import { Toys } from "./toys.js"
 import { Foods } from "./foods.js"
 import { Desserts } from "./desserts.js"
+import { selectLocation } from "./selectLocation.js"
+import { selectDessert } from "./selectDessert.js"
 
 export const YAllHungry= () => {
     return `
         <h1>TCT Food Trucks</h1>
-        <section class="choices__location options">
+        <section class="choices__locations options">
         <h2>Locations</h2>
         ${Locations()}
        
@@ -21,7 +23,7 @@ export const YAllHungry= () => {
                 <h2>Drinks</h2>
                 ${Drinks()}
             </section>
-            <section class="choices__dessert options">
+            <section class="choices__desserts options">
             <h2>Desserts</h2>
                ${Desserts()}
         </section>
@@ -34,6 +36,13 @@ export const YAllHungry= () => {
         <article>
             <button id="orderButton">Create Custom Order</button>
         </article>
+        <div class=selectLocation>
+        ${selectLocation()}
+        
+        </div>
+        <div class=selectDessert>
+        ${selectDessert()}
+        </div>
 
         <article class="customOrders">
             <h2>Order Meal</h2>

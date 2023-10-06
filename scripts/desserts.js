@@ -1,7 +1,7 @@
-import { getDesserts, getdessertsLoc,setDessert, getTransientState} from "./database.js"
+import { getDesserts,setDessert } from "./database.js"
 
 const desserts = getDesserts()
-const dessertLocs = getdessertsLoc()
+
 
 
 document.addEventListener(
@@ -14,8 +14,7 @@ document.addEventListener(
 )
 
 export const Desserts = () => {
-    let state = getTransientState()
-    console.log(state)
+   
     let html = "<h2></h2>"
     html += "<select id='desserts'>"
     html += '<option value="0">Please Select Your Ice Cream</option>'
